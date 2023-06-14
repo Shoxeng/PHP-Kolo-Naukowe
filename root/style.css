@@ -1,0 +1,369 @@
+* {
+	box-sizing: border-box;
+  	font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+  	font-size: 16px;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+body {
+  	background-color: #435165;
+	overflow: hidden;
+    height: 100vh;
+}
+.login {
+  	width: 400px;
+  	background-color: #ffffff;
+  	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  	margin: 100px auto;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.login h1 {
+  	text-align: center;
+  	color: #5b6574;
+  	font-size: 24px;
+  	padding: 20px 0 20px 0;
+  	border-bottom: 1px solid #dee0e4;
+}
+.login form {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	padding-top: 20px;
+}
+.login form label {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	width: 50px;
+  	height: 50px;
+  	background-color: #3274d6;
+  	color: #ffffff;
+}
+
+.login form input[type="password"], .login form input[type="text"], .login form input[type="date"], .login form input[type="time"] {
+  	width: 310px;
+  	height: 50px;
+  	border: 1px solid #dee0e4;
+  	margin-bottom: 20px;
+  	padding: 0 15px;
+}
+
+.login select {
+  	width: 310px;
+  	height: 50px;
+  	border: 1px solid #dee0e4;
+  	margin-bottom: 20px;
+  	padding: 0 15px;
+}
+
+.login form textarea {
+  	width: 310px;
+  	height: 300px;
+  	border: 1px solid #dee0e4;
+  	margin-bottom: 20px;
+  	padding: 0 15px;
+}
+
+.login form input[type="submit"] {
+  	width: 100%;
+  	padding: 15px;
+ 	margin-top: 20px;
+  	background-color: #3274d6;
+  	border: 0;
+  	cursor: pointer;
+  	font-weight: bold;
+  	color: #ffffff;
+  	transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+	background-color: #2868c7;
+  	transition: background-color 0.2s;
+}
+
+.navtop {
+	flex-direction:column;
+	background-color: #2f3947;
+	height: 100%;
+	width: 200px;
+	border: 0;
+	align-self: stretch;
+	
+}
+.navtop div {
+	position:fixed;
+	padding: 5px 5px;
+	flex-direction:column;
+	margin: 0 auto;
+	width: 180px;
+	height: 130px;
+}
+.navtop div h1, .navtop div a {
+	display: block;
+	align-items: top;
+
+}
+.navtop div h1 {
+	flex: 1;
+	font-size: 24px;
+	padding: 10px 0;
+	margin: 0;
+	color: #eaebed;
+	font-weight: normal;
+}
+.navtop div a {
+	align-items: top;
+	padding: 5px 5px;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
+}
+.navtop div a i {
+	padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+	color: #eaebed;
+}
+body.loggedin {
+	display: flex;
+	background-color: #f3f4f7;
+}
+.content {
+	overflow-y: auto;
+	align-self: stretch;
+	background-color: #4a536e;
+	width: 100%;
+	height: 100%;
+	margin-left: 200 px: ;
+}
+.content h2 {
+	margin: 0;
+	padding: 25px 25px;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #fff;
+}
+
+
+.content > p, .content > div {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+
+
+
+.content > p table td, .content > div table td {
+	padding: 5px;
+}
+.content > p table td:first-child, .content > div table td:first-child {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+}
+.content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+
+.content input[type = 'submit']{
+	padding: 5px;
+	margin: 2px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #4a536e;
+}
+
+.content input[type = 'submit']:hover{
+	color: #fff;
+	background-color: #2f3947;
+}
+
+.com {
+	width:300px;
+	font-weight: bold;
+	color: #000;
+}
+
+
+.content > table i {
+	align-items: top;
+	padding: 5px 5px;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
+}
+
+.content .harmonogram {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+
+.content .harmonogram .date {
+	color: #fff;
+	width: 220px;
+	height: 220px;
+	border-style: double;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 0;
+	padding: 0;
+	background-color: #2f3947;
+}
+
+.content .harmonogram .date p {
+	margin: 0;
+	padding: 0;
+	align-self: top;
+	text-align: center;
+	font-size: 16;
+	font-weight: bold;
+	height: 30px;
+	width: 100%;
+	background-color: #4a536e;
+}
+
+.content .harmonogram .date table td {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	font-size: 14;
+	font-weight: normal;
+}
+
+.content .harmonogram input[type = "submit"]{
+	background-color: #4a536e;
+	color: #2f3947;
+	align-self: center;
+	font-weight: bold;
+	font-size: 80;
+	width: 107px;
+	height: 216px;
+}
+
+.content .harmonogram input[type = "submit"]:hover{
+	background-color: #2f3947;
+	color: #4a536e;
+}
+
+.content .wydarzenia {
+	display: flex;
+	flex-direction: column;
+}
+
+.content .wydarzenia .wydarzenie {
+	align-self: left;
+	color: #000;
+	width: 90%;
+	height: auto;
+	border-style: double;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 10px;
+	padding: 0;
+	background-color: #fff;
+}
+
+.content .wydarzenia .but {
+	display: flex;
+	flex-direction: row;
+}
+
+.content .wydarzenia .wydarzenie h6 {
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 5px;
+	align-self: top;
+	text-align: left;
+	font-weight: bold;
+	font-size: 24;
+	height: 50px;
+	width: 100%;
+	background-color: #4a536e;
+}
+
+.content .wydarzenia .wydarzenie .buttons {
+	margin-left: auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.content .wydarzenia .wydarzenie .buttons input[type = "submit"]{
+	width: 200px;
+}
+
+.content .wydarzenia .wydarzenie .dane {
+	color: #fff;
+	background-color: #252137;
+	font-size: 20;
+	align-self: left;
+	display: flex;
+	flex-direction: row;
+}
+
+.content .wydarzenia .wydarzenie img {
+	margin-right: 20px;
+}
